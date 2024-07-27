@@ -1,0 +1,34 @@
+---
+title: "EATM Scorecard"
+author: "Mouhamadou Hady, Research Scientist"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, echo=FALSE}
+# Read the saved history file
+history_lines <- readLines("my_saved_history.Rhistory")
+
+# Print the history
+cat(paste(history_lines, collapse = "\n"))
+
+```
+
+
+```{r}
+# Save console output to a text file
+sink("console_output.txt")
+
+# Example commands
+print("This is a test message.")
+summary(cars)
+
+# Stop saving console output
+sink()
+```
+
